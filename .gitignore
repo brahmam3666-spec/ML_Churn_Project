@@ -1,0 +1,12 @@
+# Ignore dataset files
+data/*.csv
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore environment files
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
