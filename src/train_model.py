@@ -56,3 +56,4 @@ print("Best Accuracy:", best_score)
 
 # Save best model
 joblib.dump(best_model, "app/model.pkl")
+joblib.dump(X.columns, "app/columns.pkl")
