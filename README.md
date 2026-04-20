@@ -35,7 +35,7 @@ Accuracy: ~81%
 
 ## Live API
 
-👉 https://your-render-url.onrender.com
+👉 https://churn-ml-api-0br6.onrender.com
 
 ## API Usage
 
@@ -65,11 +65,15 @@ Response:
 * notebooks/ → preprocessing & feature engineering
 * data/ → dataset (ignored)
 
-## Future Improvements
+## 🚀 Live Demo
+Frontend (Streamlit UI): [your-local or deployed link]
+Backend API: https://churn-ml-api-0br6.onrender.com
 
-* Add frontend UI
-* Model tuning
-* Monitoring (Grafana/Prometheus)
+## ✅ Features
+- Real-time prediction via API
+- Handles server delays (timeout handling)
+- User-friendly UI (dropdown inputs)
+- Cloud deployed ML model (Render)
 
 ---
 
