@@ -75,6 +75,9 @@ Backend API: https://churn-ml-api-0br6.onrender.com
 - User-friendly UI (dropdown inputs)
 - Cloud deployed ML model (Render)
 
+
+--> Airflow DAG added for pipeline automation (conceptual, not executed locally due to OS limitations)
+
 ---
 
 ⭐ If you like this project, give it a star!
