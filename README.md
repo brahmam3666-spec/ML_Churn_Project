@@ -78,6 +78,16 @@ Backend API: https://churn-ml-api-0br6.onrender.com
 
 --> Airflow DAG added for pipeline automation (conceptual, not executed locally due to OS limitations)
 
+## 📊 Monitoring (MLOps)
+
+• Implemented API monitoring using Prometheus  
+• Exposed metrics endpoint (/metrics) in Flask API  
+• Configured Prometheus to scrape metrics  
+• Built Grafana dashboard to visualize API request count  
+
+## 🔍 Metrics Tracked
+- request_count_total (API usage)
+
 ---
 
 ⭐ If you like this project, give it a star!
