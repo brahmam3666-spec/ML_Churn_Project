@@ -88,6 +88,17 @@ Backend API: https://churn-ml-api-0br6.onrender.com
 ## 🔍 Metrics Tracked
 - request_count_total (API usage)
 
+## 📊 Monitoring & Alerting (MLOps)
+
+• Integrated Prometheus for collecting API metrics  
+• Exposed /metrics endpoint in Flask API  
+• Configured Prometheus to scrape metrics  
+• Implemented alert rules to detect when API receives no requests  
+• Built Grafana dashboard for real-time visualization  
+
+## 🚨 Alerting
+- NoRequests alert triggers when API has no traffic for 1 minute
+
 ---
 
 ⭐ If you like this project, give it a star!

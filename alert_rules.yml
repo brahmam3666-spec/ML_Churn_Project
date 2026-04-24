@@ -1,0 +1,11 @@
+groups:
+  - name: ml-api-alerts
+    rules:
+      - alert: NoRequests
+        expr: increase(request_count_total[1m]) == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "No API requests detected"
+          description: "API is not receiving any requests"
