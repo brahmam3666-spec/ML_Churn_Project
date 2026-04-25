@@ -1,16 +1,18 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import joblib
 import pandas as pd
 from prometheus_client import Counter, generate_latest
+import os
 
-# Load model
-model = joblib.load("app/model.pkl")
-columns = joblib.load("app/columns.pkl")
+app = Flask(__name__)
 
 # Metric
 REQUEST_COUNT = Counter('request_count', 'Total API Requests')
 
-app = Flask(__name__)
+# Load model (ONLY ONCE)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
+columns = joblib.load(os.path.join(BASE_DIR, "columns.pkl"))
 
 @app.route('/')
 def home():
@@ -18,7 +20,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    REQUEST_COUNT.inc()   # 👈 COUNT REQUEST
+    REQUEST_COUNT.inc()
 
     data = request.json
     df = pd.DataFrame([data])
@@ -28,11 +30,10 @@ def predict():
 
     return jsonify({"prediction": int(prediction)})
 
-from flask import Response
-
 @app.route('/metrics')
 def metrics():
     return Response(generate_latest(), mimetype='text/plain')
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
