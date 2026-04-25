@@ -99,6 +99,8 @@ Backend API: https://churn-ml-api-0br6.onrender.com
 ## 🚨 Alerting
 - NoRequests alert triggers when API has no traffic for 1 minute
 
+- Monitoring + Alerting using Prometheus and Alertmanager
+
 ---
 
 ⭐ If you like this project, give it a star!

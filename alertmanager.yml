@@ -1,0 +1,14 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'kollibrahmam6@gmail.com'
+  smtp_auth_username: 'kollibrahmam6@gmail.com'
+  smtp_auth_password: 'knoh bgey trnx hpor'
+
+route:
+  receiver: 'email-alert'
+
+receivers:
+  - name: 'email-alert'
+    email_configs:
+      - to: 'kollibrahmam6@gmail.com'
+        from: 'kollibrahmam6@gmail.com'
