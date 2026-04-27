@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: brahmam3666/churn-api
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 5000
