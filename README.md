@@ -101,6 +101,22 @@ Backend API: https://churn-ml-api-0br6.onrender.com
 
 - Monitoring + Alerting using Prometheus and Alertmanager
 
+
+## Kubernetes & Helm (MLOps)
+
+• Designed Kubernetes deployment and service configurations  
+• Implemented Helm charts for reusable and configurable deployments  
+• Enabled scalability and environment-based configuration  
+
+## Tech Stack
+- Flask, Scikit-learn  
+- Docker  
+- GitHub Actions (CI/CD)  
+- Prometheus + Grafana  
+- Alertmanager  
+- Kubernetes  
+- Helm  
+
 ---
 
 ⭐ If you like this project, give it a star!
